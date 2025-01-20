@@ -6,3 +6,4 @@ vscode:
     - AdaCore.ada
     - slbtty.Lisp-Syntax
     - mhutchie.git-graph
+    - ms-sarifvscode.sarif-viewer

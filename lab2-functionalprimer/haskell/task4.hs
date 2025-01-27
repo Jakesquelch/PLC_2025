@@ -6,7 +6,7 @@ ask prompt =
   if line == "quit"
     then putStrLn "quitting..."
     else if line == ""
-      then ask prompt
+      then ask (prompt ++ "!")
       else do
         putStrLn ("you said: " ++ reverse line)
         ask prompt

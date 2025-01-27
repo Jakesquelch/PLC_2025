@@ -27,5 +27,8 @@ r11 = zip [1..3] (map sqrt [1..2])
 
 r12 = print [1..3]
 
+r13 = map (*2) [1,2,3]
+-- Added a new map
+
 main :: IO ()
 main = pure ()

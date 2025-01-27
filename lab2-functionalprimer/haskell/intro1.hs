@@ -2,7 +2,7 @@ module Intro1 where
 
 -- define named constants:
 r1 = 1
-r2 = b^2 + 1/b where b = 2
+r2 = b^2 + 1/b where b = 2.0 -- Added a decimal to make it a float
 
 -- define a function:
 diff a b = abs (a - b)

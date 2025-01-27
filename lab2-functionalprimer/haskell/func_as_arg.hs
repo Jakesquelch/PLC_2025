@@ -1,13 +1,12 @@
 -- Define inpFunc
-inpFunc :: Int -> Int -> [Int] --Dont need this just good to have
-inpFunc start end = [start..end] 
+inpFunc :: Int -> Int -> [Int] -- Optional type signature for clarity
+inpFunc start end = [start..end]
 
 -- Define applicatorFunc
-applicatorFunc :: [Int] -> Char -> Double --Dont need this just good to have
-applicatorFunc inpFunc s = 
-  if s == 's' 
-    then fromIntegral (sum inpFunc) 
-    else fromIntegral (sum inpFunc) / fromIntegral (length inpFunc)
+applicatorFunc :: [Int] -> Char -> Double -- Optional type signature for clarity
+applicatorFunc inpFunc s
+  | s == 's'  = fromIntegral (sum inpFunc)
+  | otherwise = fromIntegral (sum inpFunc) / fromIntegral (length inpFunc)
 
 main :: IO ()
 main = do
@@ -16,9 +15,9 @@ main = do
     putStrLn "Enter the end of the range:"
     end <- readLn :: IO Int
 
-    if start > 0 && end >= start 
-      then do
-        let result = applicatorFunc (inpFunc start end) 'a' -- Call applicatorFunc with inpFunc and 'a'
-        putStrLn ("Result = " ++ show result)
-      else
-        putStrLn "Please enter valid positive integers with start <= end."
+    case () of
+      _ | start <= 0 || end < start -> 
+            putStrLn "Please enter valid positive integers with start <= end."
+        | otherwise -> do
+            let result = applicatorFunc (inpFunc start end) 'a' -- Call applicatorFunc with inpFunc and 'a'
+            putStrLn ("Result = " ++ show result)

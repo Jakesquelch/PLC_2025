@@ -86,7 +86,7 @@ public class Overflow
         for ( int j = 1; j <= m; j++ )
         {
             ns = ns * n;
-//             assert ?? : "Floating-point overflow";
+               n <= 3.402823466 E + 38 : "Floating-point overflow";
             resultList.add(ns);
         }
         return resultList;
@@ -112,7 +112,7 @@ public class Overflow
         for ( int j = 0; j <= m; j++ )
         {
             ns_inv = ns_inv / n; // update from 1/n^(i-1) to 1/n^i
-               assert n>= 0 : "Floating point underflow";
+               assert n >= 1.175494351 E - 38 : "Floating point underflow";
             geom_sum = ns_inv + geom_sum;
             resultList.add(geom_sum);
         }

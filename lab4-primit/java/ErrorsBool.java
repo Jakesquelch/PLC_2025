@@ -33,22 +33,16 @@ public class ErrorsBool
     }
   
 
-    private static Result pl2PLType(Error e)
-    {
-        if (e == Error.FP_OVERFLOW)
-            return Result.INFINITY;
-        else if (e == Error.FP_UNDERFLOW)
-            return Result.ZERO;
-        else if (e == Error.FP_ROUNDING)
-            return Result.A_BIT_DIFFERENT;
-        else 
-            return Result.VERY_DIFFERENT;
-        /* 
-            !!!! Beware: The above is not a recommended programming style.
-            !!!!         It is used here only to develop understanding of
-            !!!!         functional and imperative if-then-else statements.
-        */
+    private static Result pl2PLType(Error e) {
+        switch (e) {
+            case FP_OVERFLOW:  return Result.INFINITY;
+            case FP_UNDERFLOW: return Result.ZERO;
+            case FP_ROUNDING:  return Result.A_BIT_DIFFERENT;
+            case INT_OVERFLOW: return Result.VERY_DIFFERENT;
+            default: throw new IllegalArgumentException("Unexpected error: " + e);
+        }
     }
+
 
     private static Result error2Result(Error e)
     {

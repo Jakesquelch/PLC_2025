@@ -109,12 +109,6 @@ public class PlaylistColls {
             }
         }
 
-
-
-
-
-
-
         System.out.printf("shortItemLengths1 = %s\n", shortItemLengths1);
 
         System.out.println();

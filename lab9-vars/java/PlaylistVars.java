@@ -70,7 +70,7 @@ public class PlaylistVars {
         System.out.printf("playlist1 = %s\n", playlist1);
 
         // calculate the overall length of playlist1:
-        Float length1 = 0f; // TASK: related to the scope of variable "length1"
+        Float length1 = 0f; // TASK: related to the scope of variable "length1" //This is defined in main so can only be used from here down to the end of this method
         for (final Item item : playlist1) { // TASK: related to the lifetimes of the variable "item"
             length1 = length1 + item.length_secs;
         }

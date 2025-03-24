@@ -45,7 +45,7 @@ playlist1 = [piece1, advert1, piece2]
     piece1  = Piece "Moonlight" "C. Arrau"       (17*minutes+26*seconds)
     piece2  = Piece "Pathetique" "D. Barenboim"  (16*minutes+49*seconds)
     advert1 = Advert (Product "chocolate" "Yummm")          (15*seconds)
-    minutes = 60*seconds -- TASK: identify the scope of variable "minutes"
+    minutes = 60*seconds -- TASK: identify the scope of variable "minutes" //the scope is within this block of code, before or after the declaration
     seconds = 1
 
 length1 = sum [ item_length_secs item | item <- playlist1 ]

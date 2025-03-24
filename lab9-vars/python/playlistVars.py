@@ -49,9 +49,8 @@ class Advert:
         l = self.length_secs
         assert 0 < l and l < 120
 
-playlist1 = []
-
 def definePlaylist1():
+    global playlist1
     piece1 = Piece("Moonlight", "C. Arrau", 17*60+26.0)
     piece2 = Piece("Pathetique", "D. Barenboim", 16*60+49.0)
     advert1 = Advert(Product("chocolate", "Yummm"), 15.0)

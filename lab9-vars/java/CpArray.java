@@ -33,5 +33,6 @@ public class CpArray
 
         System.out.printf("a[1] = %d\n", a[1]);
         System.out.printf("b[1] = %d\n", b[1]);
+        //Now this program prints different to Ada i believe, because when a=b is set and a copy reference is made, within Java a link is now made between the 2, whereas with ada, they are just copied but there is no link.
     }
 }
